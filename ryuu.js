@@ -5,7 +5,7 @@ const login = require("./fca-unofficial/index.js");
 const { convertToGothic } = require("./utils/fontUtils.js");
 const cron = require("node-cron");
 const autopost = require("./handler/autopost.js");
-const config = JSON.parse(fs.readFileSync(path.join(__dirname, "configs.json"), "utf8"));
+const configs = JSON.parse(fs.readFileSync(path.join(__dirname, "fca-unofficial", "configs.json"), "utf8"));
 global.config = JSON.parse(fs.readFileSync("config.json", "utf8"));
 global.prefix = global.config.prefix;
 global.apiOptions = global.config.apiOptions;
@@ -92,7 +92,7 @@ const runBot = () => {
             ...(global.proxy && { request: { proxy: global.proxy } }),
         };
 
-        login(options, config.FCA_OPTIONS, (loginError, api) => {
+        login(options, configs.FCA_OPTIONS, (loginError, api) => {
             if (loginError) {
                 console.error("Login error:", loginError);
                 return;

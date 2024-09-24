@@ -2,7 +2,7 @@
     "prefix": "/",
     "owner": "Jr Busaco",
     "apiOptions": {
-        "forceLogin": false,
+        "forceLogin": false, 
         "selfListen": false,
         "autoReconnect": false,
         "updatePresence": false,

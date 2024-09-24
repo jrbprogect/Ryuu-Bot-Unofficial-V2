@@ -15,7 +15,7 @@ module.exports = {
         helpMessage += commandList + `\n\n`;
         helpMessage += `Total Commands: [ ${commands.size} ]\n`;
         helpMessage += `Prefix: [ ${global.convertToGothic(global.config.prefix)} ]\n`;
-        helpMessage += `Created By: ${global.convertToGothic(global.owner || 'Unknown')}\n`;
+        helpMessage += `Created By: ${global.convertToGothic(global.owner || 'test')}\n`;
 
         await api.sendMessage(helpMessage, threadID, messageID);
     },
